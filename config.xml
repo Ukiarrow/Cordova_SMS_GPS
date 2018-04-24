@@ -2,7 +2,7 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
     id        = "sms.geo.cfloress.unab"
-    version   = "1.0.0">
+    version   = "1.0.1">
 
 <name>Demo Unab, Enviar SMS+GPS</name>
 
@@ -11,7 +11,7 @@ Aplicacion de Ejemplo para Enviar SMS+GPS.
 </description>
 
 <author href="http://www.unab.cl" email="cfloressapiain@gmail.com">
-Claudio Andres Flores Sapiain
+Claudio Andres Flores Sapiain / Felipe Rivas
 </author>
 
 <preference name="target-device" value="universal" />
