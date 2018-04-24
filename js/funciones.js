@@ -26,22 +26,23 @@ function showAlert(msj)
 
 function sendSMS()
 {
-  var fono=document.getElementById('fono').value;
-  if(fono=='')
+  var fono = document.getElementById('fono').value;
+  var mensajeSMS = document.getElementById('mensajeSMS').value;
+
+  if (fono == '' || mensajeSMS == '')
   {
 	  showAlert('Debe Ingresar el Fono!');
-  }
-  else
+  }else
   {
-    
-    var textoURl = "y no tengo GPS Activado,";
-	  if(lat != 0){
+    /* var textoURl = "y no tengo GPS Activado,";
+	   if(lat != 0){
 		  textoURl = "https://www.google.com/maps?q="+lat+","+lon;
-	  }
-	  
+	  } */
+    
+    var textoURI = mensajeSMS;
 	 if(SMS) 
 	 {
-	   SMS.sendSMS(fono, "Esto es una prueba de SMS con Cordova/Phonegap.."+textoURl, function () { showAlert('Message sent successfully');}, function (e) { showAlert('Message Failed:' + e);});
+	   SMS.sendSMS(fono,mensajeSMS, "Esto es una prueba de SMS con Cordova/Phonegap.."+textoURl, function () { showAlert('Message sent successfully');}, function (e) { showAlert('Message Failed:' + e);});
 	 }
 	  
   }
